@@ -11,5 +11,6 @@ else: minutes_txt = str(minutes)
 seconds = time_sec - minutes * 60
 if seconds < 10:
     seconds_xt = '0' + str(seconds)
-else: seconds_xt = str(seconds) 
+else:
+    seconds_xt = str(seconds) 
 print(f"Время в формате ч:м:с - {hours_txt}:{minutes_txt}:{seconds_xt}")
