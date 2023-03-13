@@ -4,9 +4,8 @@ sum1, sum2 = int(0), int(0)
 num = input('Введите шестизначный номер билета: ')
 while len(num) != tiket_nums:
     num = input('Введите шестизначный номер билета: ') 
-for i in range(int(len(num)/2)):
-    sum1 = sum1 + int(num[i])
-    sum2 = sum2 + int(num[len(num)-1-i])
+sum1 = int(num[0]) + int(num[1]) + int(num[2])
+sum2 = int(num[3]) + int(num[4]) + int(num[5])
 if sum1 == sum2:
     print(f'{num} -> билет счастливый')
 else: 
