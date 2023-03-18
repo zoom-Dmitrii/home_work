@@ -7,5 +7,5 @@ while num < 0:
 print(f'Все целые степени двойки до числа {num}')
 degree = 0
 while 2 ** degree < num:
-    degree += 1
     print(f'2^{degree} = {2 ** degree}   ', end = ' ')
+    degree += 1
