@@ -6,7 +6,6 @@
 
 
 def input_int(out_txt, digit=None):
-    digit = None
     while digit is None:
         try:
             digit = int(input(out_txt, ))
