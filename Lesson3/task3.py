@@ -10,10 +10,9 @@ def input_txt(out_txt, txt_in=''):
 
 
 def input_int(out_txt, digit=None):
-    digit = None
-    while digit is None:
+    while digit is None or digit < 1900:
         try:
-            digit = int(input('Год рождения: '))
+            digit = int(input(out_txt, ))
         except ValueError:
             print("Нужно ввести число")
     return digit
