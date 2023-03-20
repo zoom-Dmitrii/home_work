@@ -1,4 +1,4 @@
-def data_user(mail=None, city=None, born=None, family=None, name=None, phon=None):
+def data_user(mail, city, born, family, name, phon):
     return (f'{family} {name}, {born} года рождения, проживает в городе {city}, '
             f'email: {mail}, телефон: {phon}')
 
