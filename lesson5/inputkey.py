@@ -1,12 +1,23 @@
 '''
 Модуль обработки корректного ввода данных
 '''
+
+
 def input_int(out_txt, digit=None):
     while digit is None:
         try:
             digit = int(input(out_txt, ))
         except ValueError:
             print("Нужно ввести число")
+    return digit
+
+
+def input_natural(out_txt, digit=None):
+    while digit is None or digit < 1:
+        try:
+            digit = int(input(out_txt, ))
+        except ValueError:
+            print("Нужно ввести натуральное число")
     return digit
 
 
