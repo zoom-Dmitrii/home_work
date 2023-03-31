@@ -15,7 +15,5 @@ def operation(num, even=0, uneven=0):
         return operation(num // 10, even, uneven)
 
 
-#    return f'Четных цифр: {even}. Нечетных чисел: {uneven}'
-
 sign = input_natural('Введите натуральное число: ')
 print(operation(sign))
