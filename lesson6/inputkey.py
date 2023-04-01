@@ -14,6 +14,7 @@ dict_ = {
     9: "\u2079"
 }
 
+
 def input_int(out_txt, digit=None):
     while digit is None:
         try:
@@ -25,6 +26,15 @@ def input_int(out_txt, digit=None):
 
 def input_natural(out_txt, digit=None):
     while digit is None or digit < 1:
+        try:
+            digit = int(input(out_txt, ))
+        except ValueError:
+            print("Нужно ввести натуральное число")
+    return digit
+
+
+def input_natural_range(out_txt, digit=None):
+    while digit is None or digit < 1 or digit > 100 :
         try:
             digit = int(input(out_txt, ))
         except ValueError:
