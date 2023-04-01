@@ -7,8 +7,7 @@ from inputkey import input_natural
 
 def operation(num, num_ind=1, left_side='', left_sum=0):
     if num_ind > num:
-        print(f' {left_sum} = {int(num * (num + 1) / 2)}')
-        return f'Доказателсьво ** {left_side} = {num}({num}+1)/2 ** верно'
+        return left_side, left_sum
     else:
         if left_side == '':
             left_side = str(num_ind)
@@ -20,4 +19,6 @@ def operation(num, num_ind=1, left_side='', left_sum=0):
 
 
 sign = input_natural('Введите натуральное число: ')
-print(operation(sign))
+answer = operation(sign)
+print(f' {answer[1]} = {int(sign * (sign + 1) / 2)}')
+print(f'Доказателсьво ** {answer[0]} = {sign}({sign}+1)/2 ** верно')
