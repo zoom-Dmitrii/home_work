@@ -1,6 +1,8 @@
 '''
 Модуль обработки корректного ввода данных
 '''
+import random
+
 dict_ = {
     0: "\u2070",
     1: "\u00B9",
@@ -72,7 +74,7 @@ def input_txt(out_txt, text=''):
     return text
 
 
-def input_matrix(out_txt, matrix=[], line_matrix=None, column_matrix=None):
+def input_matrix(out_txt, line_matrix=None, column_matrix=None):
     matrix = []
     while line_matrix is None or column_matrix is None or line_matrix < 1 or column_matrix < 1:
         try:
@@ -86,6 +88,6 @@ def input_matrix(out_txt, matrix=[], line_matrix=None, column_matrix=None):
     for ind_1 in range(line_matrix):
         new_el = []
         for ind_2 in range(column_matrix):
-            new_el.append(0)
+            new_el.append(random.randint(0, 101))
         matrix.append(new_el)
     return matrix
